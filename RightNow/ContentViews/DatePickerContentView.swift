@@ -28,6 +28,7 @@ class DatePickerContentView: UIView, UIContentView {
         self.configuration = configuration
         super.init(frame: .zero)
         addPinnedSubview(datePicker)
+        datePicker.addTarget(self, action: #selector(didPick(_:)), for: .valueChanged)
         datePicker.preferredDatePickerStyle = .inline
     }
     

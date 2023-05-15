@@ -34,6 +34,7 @@ class TextViewContentView: UIView, UIContentView {
         super.init(frame: .zero)
         addPinnedSubview(textView, height: 200)
         textView.backgroundColor = nil
+        textView.delegate = self
         textView.font = UIFont.preferredFont(forTextStyle: .body)
     }
     

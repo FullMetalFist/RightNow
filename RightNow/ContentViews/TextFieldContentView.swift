@@ -33,6 +33,7 @@ class TextFieldContentView: UIView, UIContentView {
         self.configuration = configuration
         super.init(frame: .zero)
         addPinnedSubview(textField, insets: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
+        textField.addTarget(self, action: #selector(didChange(_:)), for: .editingChanged)
         textField.clearButtonMode = .whileEditing
     }
     
