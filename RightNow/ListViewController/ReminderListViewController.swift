@@ -13,7 +13,7 @@ class ReminderListViewController: UICollectionViewController {
     var reminders: [Reminder] = Reminder.sampleData
     var listStyle: ReminderListStyle = .today
     var filteredReminders: [Reminder] {
-        return reminders.filter { listStyle.shouldIncludeDate(date: $0.dueDate) }.sorted {
+        return reminders.filter { listStyle.shouldInclude(date: $0.dueDate) }.sorted {
             $0.dueDate < $1.dueDate
         }
     }

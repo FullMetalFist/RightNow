@@ -23,7 +23,7 @@ enum ReminderListStyle: Int {
         }
     }
     
-    func shouldIncludeDate(date: Date) -> Bool {
+    func shouldInclude(date: Date) -> Bool {
         let isInToday = Locale.current.calendar.isDateInToday(date)
         switch self {
         case .today:
